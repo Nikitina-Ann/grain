@@ -1,0 +1,207 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+10
+3700
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+hw1_grain
+# storage
+db|grain0.(0).cnf
+db|grain0.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+hw1_grain.vhd
+4addf5cdb803bf7cf6e9f444b9a9e4
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+parameter
+0
+PARAMETER_SIGNED_DEC
+DEF
+}
+# include_file {
+grain_datapath_slow.vhd
+d6a7b55c4a37df6af359f49132b0a2d9
+shiftreg.vhd
+9296bc61c79e9bbb697c4234b985e92f
+grain.vhd
+3aa8413f2257f5513ff591a95a7c529
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+grain
+# storage
+db|grain0.(1).cnf
+db|grain0.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+grain.vhd
+3aa8413f2257f5513ff591a95a7c529
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+parameter
+0
+PARAMETER_SIGNED_DEC
+USR
+ constraint(keystream_o)
+0 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+grain_datapath_slow.vhd
+d6a7b55c4a37df6af359f49132b0a2d9
+}
+# hierarchies {
+grain:top
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+grain_datapath_slow
+# storage
+db|grain0.(2).cnf
+db|grain0.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+grain_datapath_slow.vhd
+d6a7b55c4a37df6af359f49132b0a2d9
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+parameter
+0
+PARAMETER_SIGNED_DEC
+USR
+ constraint(keystream)
+0 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+grain:top|grain_datapath_slow:functions0
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+SHIFTREG
+# storage
+db|grain0.(3).cnf
+db|grain0.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+shiftreg.vhd
+9296bc61c79e9bbb697c4234b985e92f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+parameter
+0
+PARAMETER_SIGNED_DEC
+USR
+ constraint(sdin)
+0 downto 0
+PARAMETER_STRING
+USR
+ constraint(dout)
+79 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+SHIFTREG:shift
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

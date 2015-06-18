@@ -1,0 +1,6 @@
+
+State Machine - |hw1_grain|grain:top|state
+Name state.INIT_RUN state.INIT_KEYIV state.IDLE 
+state.IDLE 0 0 0 
+state.INIT_KEYIV 0 1 1 
+state.INIT_RUN 1 0 1 

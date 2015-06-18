@@ -1,0 +1,192 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\projects\grain\simulation\modelsim
+Efifo
+Z1 w1414506502
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dD:\projects\grain\simulation\modelsim
+Z5 8D:/projects/grain/fifo.vhd
+Z6 FD:/projects/grain/fifo.vhd
+l0
+L42
+VM<^=b<ISJ4B@PiT0CNJJ00
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1415221083.887000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/projects/grain/fifo.vhd|
+Z10 !s107 D:/projects/grain/fifo.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 deXY9M5QCfEWljZMlnaS<0
+!i10b 1
+Asyn
+R2
+R3
+Z13 DEx4 work 4 fifo 0 22 M<^=b<ISJ4B@PiT0CNJJ00
+l88
+L56
+Vc:[K]83ZRH0Rh5_<M_z1Q3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 lULa:4a6gbY?VI2[fCIeC2
+!i10b 1
+Egrain
+Z14 w1412160539
+Z15 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z16 8D:/projects/grain/grain.vhd
+Z17 FD:/projects/grain/grain.vhd
+l0
+L14
+VdO03[cQ>@ei54<_0WY;_l2
+R7
+31
+Z18 !s108 1415221084.077000
+Z19 !s90 -reportprogress|300|-93|-work|work|D:/projects/grain/grain.vhd|
+Z20 !s107 D:/projects/grain/grain.vhd|
+R11
+R12
+!s100 87<@?m@i42GoBhRk_ke7O3
+!i10b 1
+Abehav
+Z21 DEx4 work 19 grain_datapath_fast 0 22 BJZQmUP8f:hMzQdfE]ODd0
+Z22 DEx4 work 19 grain_datapath_slow 0 22 6FRXJ`GTT:SVloNo5@7hM3
+R15
+R2
+R3
+Z23 DEx4 work 5 grain 0 22 dO03[cQ>@ei54<_0WY;_l2
+l46
+L34
+V5BE7`RDC8MlSnE4maBakZ1
+R7
+31
+R18
+R19
+R20
+R11
+R12
+!s100 8?h4DdbNz=P14@G_A[TYA1
+!i10b 1
+Egrain_datapath_fast
+Z24 w1412166980
+R15
+R2
+R3
+R4
+Z25 8D:/projects/grain/grain_datapath_fast.vhd
+Z26 FD:/projects/grain/grain_datapath_fast.vhd
+l0
+L15
+VBJZQmUP8f:hMzQdfE]ODd0
+R7
+31
+Z27 !s108 1415221083.707000
+Z28 !s90 -reportprogress|300|-93|-work|work|D:/projects/grain/grain_datapath_fast.vhd|
+Z29 !s107 D:/projects/grain/grain_datapath_fast.vhd|
+R11
+R12
+!s100 ?S^>znJNYc[HR`H6:leno2
+!i10b 1
+Abehav
+R15
+R2
+R3
+R21
+l52
+L36
+VQFQ7ZlaLgf8_Xnm6LA>1K2
+R7
+31
+R27
+R28
+R29
+R11
+R12
+!s100 V]^VIIGgAX5j65TO?DfPO0
+!i10b 1
+Egrain_datapath_slow
+Z30 w1412677188
+R15
+R2
+R3
+R4
+Z31 8D:/projects/grain/grain_datapath_slow.vhd
+Z32 FD:/projects/grain/grain_datapath_slow.vhd
+l0
+L15
+V6FRXJ`GTT:SVloNo5@7hM3
+R7
+31
+Z33 !s108 1415221083.467000
+Z34 !s90 -reportprogress|300|-93|-work|work|D:/projects/grain/grain_datapath_slow.vhd|
+Z35 !s107 D:/projects/grain/grain_datapath_slow.vhd|
+R11
+R12
+!s100 nAYmVzEzTz6;kz9aQ=W^02
+!i10b 1
+Abehav
+R15
+R2
+R3
+R22
+l41
+L36
+VECk:eATHL:aR2<X>aEQ1h3
+R7
+31
+R33
+R34
+R35
+R11
+R12
+!s100 >BMcZiWW4En2<HANj]>d93
+!i10b 1
+Etest
+Z36 w1415220794
+R15
+R2
+R3
+R4
+Z37 8D:/projects/grain/test.vhd
+Z38 FD:/projects/grain/test.vhd
+l0
+L5
+VQSQNXVm__[;BH<2HiEkHD1
+!s100 B4VO;FD[aFH4f0i>NE4NM2
+R7
+31
+!i10b 1
+Z39 !s108 1415221084.277000
+Z40 !s90 -reportprogress|300|-93|-work|work|D:/projects/grain/test.vhd|
+Z41 !s107 D:/projects/grain/test.vhd|
+R11
+R12
+Abehav
+R13
+R23
+R15
+R2
+R3
+DEx4 work 4 test 0 22 QSQNXVm__[;BH<2HiEkHD1
+l42
+L13
+Vm^_Ob7b]WaR]J?z0D<h7Y3
+!s100 kG5BG99D?DUIPFUOSCBjW2
+R7
+31
+!i10b 1
+R39
+R40
+R41
+R11
+R12

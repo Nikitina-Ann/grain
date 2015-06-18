@@ -1,0 +1,134 @@
+# Reading D:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do grain0_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {D:/projects/grain/grain_datapath_slow.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity grain_datapath_slow
+# -- Compiling architecture behav of grain_datapath_slow
+# vcom -93 -work work {D:/projects/grain/grain_datapath_fast.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity grain_datapath_fast
+# -- Compiling architecture behav of grain_datapath_fast
+# vcom -93 -work work {D:/projects/grain/fifo.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fifo
+# -- Compiling architecture SYN of fifo
+# vcom -93 -work work {D:/projects/grain/grain.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity grain
+# -- Compiling architecture behav of grain
+# -- Loading entity grain_datapath_slow
+# -- Loading entity grain_datapath_fast
+# vcom -93 -work work {D:/projects/grain/test.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity test
+# -- Compiling architecture behav of test
+# -- Loading entity grain
+# -- Loading entity fifo
+# 
+vcom -reportprogress 300 -work work D:/projects/grain/tb_grain.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_grain
+# -- Compiling architecture test of tb_grain
+# -- Loading entity grain
+# -- Loading entity fifo
+vsim -do grain0_run_msim_rtl_vhdl.do -l msim_transcript -gui work.tb_grain
+# vsim -do grain0_run_msim_rtl_vhdl.do -l msim_transcript -gui work.tb_grain 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_grain(test)
+# Loading work.grain(behav)
+# Loading work.grain_datapath_slow(behav)
+# Loading work.fifo(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.scfifo(behavior)
+# do grain0_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/projects/grain/grain_datapath_slow.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity grain_datapath_slow
+# -- Compiling architecture behav of grain_datapath_slow
+# vcom -93 -work work {D:/projects/grain/grain_datapath_fast.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity grain_datapath_fast
+# -- Compiling architecture behav of grain_datapath_fast
+# vcom -93 -work work {D:/projects/grain/fifo.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fifo
+# -- Compiling architecture SYN of fifo
+# vcom -93 -work work {D:/projects/grain/grain.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity grain
+# -- Compiling architecture behav of grain
+# -- Loading entity grain_datapath_slow
+# -- Loading entity grain_datapath_fast
+# vcom -93 -work work {D:/projects/grain/test.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity test
+# -- Compiling architecture behav of test
+# -- Loading entity grain
+# -- Loading entity fifo
+# 
+add wave -position insertpoint sim:/tb_grain/*
+run

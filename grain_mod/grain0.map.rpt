@@ -1,0 +1,574 @@
+Analysis & Synthesis report for grain0
+Thu Jun 18 22:34:56 2015
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |hw1_grain|grain:top|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |hw1_grain
+ 13. Parameter Settings for User Entity Instance: grain:top
+ 14. Parameter Settings for User Entity Instance: grain:top|grain_datapath_slow:functions0
+ 15. Parameter Settings for User Entity Instance: SHIFTREG:shift
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Jun 18 22:34:56 2015        ;
+; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name                      ; grain0                                       ;
+; Top-level Entity Name              ; hw1_grain                                    ;
+; Family                             ; Cyclone III                                  ;
+; Total logic elements               ; 497                                          ;
+;     Total combinational functions  ; 97                                           ;
+;     Dedicated logic registers      ; 452                                          ;
+; Total registers                    ; 452                                          ;
+; Total pins                         ; 88                                           ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0                                            ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; hw1_grain          ; grain0             ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Synchronization Register Chain Length                                      ; 2                  ; 3                  ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                      ;
++----------------------------------+-----------------+-----------------+--------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path         ;
++----------------------------------+-----------------+-----------------+--------------------------------------+
+; hw1_grain.vhd                    ; yes             ; User VHDL File  ; D:/grain_mod/hw1_grain.vhd           ;
+; grain_datapath_slow.vhd          ; yes             ; User VHDL File  ; D:/grain_mod/grain_datapath_slow.vhd ;
+; grain.vhd                        ; yes             ; User VHDL File  ; D:/grain_mod/grain.vhd               ;
+; shiftreg.vhd                     ; yes             ; User VHDL File  ; D:/grain_mod/shiftreg.vhd            ;
++----------------------------------+-----------------+-----------------+--------------------------------------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 497         ;
+;                                             ;             ;
+; Total combinational functions               ; 97          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 42          ;
+;     -- 3 input functions                    ; 10          ;
+;     -- <=2 input functions                  ; 45          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 59          ;
+;     -- arithmetic mode                      ; 38          ;
+;                                             ;             ;
+; Total registers                             ; 452         ;
+;     -- Dedicated logic registers            ; 452         ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 88          ;
+; Maximum fan-out node                        ; CLK_I~input ;
+; Maximum fan-out                             ; 452         ;
+; Total fan-out                               ; 1812        ;
+; Average fan-out                             ; 2.50        ;
++---------------------------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                     ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
+; |hw1_grain                             ; 97 (1)            ; 452 (80)     ; 0           ; 0            ; 0       ; 0         ; 88   ; 0            ; |hw1_grain                                          ; work         ;
+;    |SHIFTREG:shift|                    ; 45 (45)           ; 192 (192)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |hw1_grain|SHIFTREG:shift                           ; work         ;
+;    |grain:top|                         ; 51 (27)           ; 180 (20)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |hw1_grain|grain:top                                ;              ;
+;       |grain_datapath_slow:functions0| ; 24 (24)           ; 160 (160)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |hw1_grain|grain:top|grain_datapath_slow:functions0 ;              ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------+
+; State Machine - |hw1_grain|grain:top|state                        ;
++------------------+----------------+------------------+------------+
+; Name             ; state.INIT_RUN ; state.INIT_KEYIV ; state.IDLE ;
++------------------+----------------+------------------+------------+
+; state.IDLE       ; 0              ; 0                ; 0          ;
+; state.INIT_KEYIV ; 0              ; 1                ; 1          ;
+; state.INIT_RUN   ; 1              ; 0                ; 1          ;
++------------------+----------------+------------------+------------+
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; SHIFTREG:shift|key_memory[0]~en        ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[1]~en        ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[2]~en        ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[3]~en        ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[4]~en        ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[5]~en        ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[6]~en        ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[7]~en        ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[8]~en        ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[9]~en        ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[10]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[11]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[12]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[13]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[14]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[15]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[16]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[17]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[18]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[19]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[20]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[21]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[22]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[23]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[24]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[25]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[26]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[27]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[28]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[29]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[30]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[31]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[32]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[33]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[34]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[35]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[36]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[37]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[38]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[39]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[40]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[41]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[42]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[43]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[44]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[45]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[46]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[47]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[48]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[49]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[50]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[51]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[52]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[53]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[54]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[55]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[56]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[57]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[58]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[59]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[60]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[61]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[62]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[63]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[64]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[65]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[66]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[67]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[68]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[69]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[70]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[71]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[72]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[73]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[74]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[75]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[76]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[77]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[78]~en       ; Lost fanout        ;
+; SHIFTREG:shift|key_memory[79]~en       ; Lost fanout        ;
+; Total Number of Removed Registers = 80 ;                    ;
++----------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 452   ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 41    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 367   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |hw1_grain|grain:top|state ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |hw1_grain ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; parameter      ; 0     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: grain:top ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; parameter      ; 0     ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: grain:top|grain_datapath_slow:functions0 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; parameter      ; 0     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SHIFTREG:shift ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; parameter      ; 0     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Jun 18 22:34:50 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off grain0 -c grain0
+Info: Found 2 design units, including 1 entities, in source file hw1_grain.vhd
+    Info: Found design unit 1: hw1_grain-behav
+    Info: Found entity 1: hw1_grain
+Info: Found 2 design units, including 1 entities, in source file grain_datapath_slow.vhd
+    Info: Found design unit 1: grain_datapath_slow-behav
+    Info: Found entity 1: grain_datapath_slow
+Info: Found 2 design units, including 1 entities, in source file grain.vhd
+    Info: Found design unit 1: grain-behav
+    Info: Found entity 1: grain
+Info: Found 2 design units, including 1 entities, in source file shiftreg.vhd
+    Info: Found design unit 1: SHIFTREG-SHIFTREG
+    Info: Found entity 1: SHIFTREG
+Info: Elaborating entity "hw1_grain" for the top level hierarchy
+Info: Elaborating entity "grain" for hierarchy "grain:top"
+Info: Elaborating entity "grain_datapath_slow" for hierarchy "grain:top|grain_datapath_slow:functions0"
+Info: Elaborating entity "SHIFTREG" for hierarchy "SHIFTREG:shift"
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[0]~0" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[1]~1" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[2]~2" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[3]~3" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[4]~4" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[5]~5" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[6]~6" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[7]~7" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[8]~8" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[9]~9" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[10]~10" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[11]~11" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[12]~12" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[13]~13" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[14]~14" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[15]~15" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[16]~16" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[17]~17" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[18]~18" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[19]~19" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[20]~20" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[21]~21" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[22]~22" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[23]~23" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[24]~24" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[25]~25" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[26]~26" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[27]~27" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[28]~28" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[29]~29" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[30]~30" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[31]~31" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[32]~32" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[33]~33" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[34]~34" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[35]~35" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[36]~36" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[37]~37" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[38]~38" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[39]~39" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[40]~40" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[41]~41" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[42]~42" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[43]~43" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[44]~44" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[45]~45" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[46]~46" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[47]~47" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[48]~48" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[49]~49" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[50]~50" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[51]~51" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[52]~52" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[53]~53" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[54]~54" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[55]~55" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[56]~56" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[57]~57" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[58]~58" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[59]~59" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[60]~60" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[61]~61" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[62]~62" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[63]~63" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[64]~64" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[65]~65" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[66]~66" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[67]~67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[68]~68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[69]~69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[70]~70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[71]~71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[72]~72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[73]~73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[74]~74" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[75]~75" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[76]~76" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[77]~77" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[78]~78" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "SHIFTREG:shift|key_memory[79]~79" feeding internal logic into a wire
+Info: Timing-Driven Synthesis is running
+Info: 80 registers lost all their fanouts during netlist optimizations. The first 80 are displayed below.
+    Info: Register "SHIFTREG:shift|key_memory[0]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[1]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[2]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[3]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[4]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[5]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[6]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[7]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[8]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[9]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[10]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[11]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[12]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[13]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[14]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[15]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[16]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[17]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[18]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[19]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[20]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[21]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[22]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[23]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[24]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[25]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[26]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[27]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[28]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[29]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[30]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[31]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[32]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[33]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[34]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[35]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[36]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[37]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[38]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[39]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[40]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[41]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[42]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[43]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[44]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[45]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[46]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[47]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[48]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[49]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[50]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[51]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[52]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[53]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[54]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[55]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[56]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[57]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[58]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[59]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[60]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[61]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[62]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[63]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[64]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[65]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[66]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[67]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[68]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[69]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[70]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[71]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[72]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[73]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[74]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[75]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[76]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[77]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[78]~en" lost all its fanouts during netlist optimizations.
+    Info: Register "SHIFTREG:shift|key_memory[79]~en" lost all its fanouts during netlist optimizations.
+Info: Implemented 586 device resources after synthesis - the final resource count might be different
+    Info: Implemented 6 input pins
+    Info: Implemented 82 output pins
+    Info: Implemented 498 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 81 warnings
+    Info: Peak virtual memory: 239 megabytes
+    Info: Processing ended: Thu Jun 18 22:34:56 2015
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
+
+

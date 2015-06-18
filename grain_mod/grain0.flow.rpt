@@ -1,0 +1,128 @@
+Flow report for grain0
+Thu Jun 18 22:35:21 2015
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++------------------------------------+----------------------------------------------+
+; Flow Status                        ; Successful - Thu Jun 18 22:35:21 2015        ;
+; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name                      ; grain0                                       ;
+; Top-level Entity Name              ; hw1_grain                                    ;
+; Family                             ; Cyclone III                                  ;
+; Met timing requirements            ; N/A                                          ;
+; Total logic elements               ; 479 / 5,136 ( 9 % )                          ;
+;     Total combinational functions  ; 97 / 5,136 ( 2 % )                           ;
+;     Dedicated logic registers      ; 452 / 5,136 ( 9 % )                          ;
+; Total registers                    ; 452                                          ;
+; Total pins                         ; 88 / 183 ( 48 % )                            ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0 / 423,936 ( 0 % )                          ;
+; Embedded Multiplier 9-bit elements ; 0 / 46 ( 0 % )                               ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                                ;
+; Device                             ; EP3C5F256C6                                  ;
+; Timing Models                      ; Final                                        ;
++------------------------------------+----------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 06/18/2015 22:34:51 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; grain0              ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                       ;
++---------------------------------------+---------------------------------+---------------+-------------+----------------+
+; Assignment Name                       ; Value                           ; Default Value ; Entity Name ; Section Id     ;
++---------------------------------------+---------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                 ; 253685013449267.143465609142820 ; --            ; --          ; --             ;
+; CRC_ERROR_OPEN_DRAIN                  ; Off                             ; On            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT                ; Vhdl                            ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                   ; ModelSim-Altera (VHDL)          ; <None>        ; --          ; --             ;
+; MISC_FILE                             ; D:/projects/grain/grain0.dpf    ; --            ; --          ; --             ;
+; PARTITION_COLOR                       ; 16764057                        ; --            ; hw1_grain   ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL   ; PLACEMENT_AND_ROUTING           ; --            ; hw1_grain   ; Top            ;
+; PARTITION_NETLIST_TYPE                ; SOURCE                          ; --            ; hw1_grain   ; Top            ;
+; SYNCHRONIZATION_REGISTER_CHAIN_LENGTH ; 2                               ; 3             ; --          ; --             ;
+; TOP_LEVEL_ENTITY                      ; hw1_grain                       ; grain0        ; --          ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS    ; Off                             ; --            ; --          ; eda_blast_fpga ;
++---------------------------------------+---------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 239 MB              ; 00:00:07                           ;
+; Fitter                    ; 00:00:16     ; 1.0                     ; 273 MB              ; 00:00:18                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 233 MB              ; 00:00:04                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 215 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 182 MB              ; 00:00:03                           ;
+; Total                     ; 00:00:26     ; --                      ; --                  ; 00:00:32                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                            ;
++---------------------------+------------------+---------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++---------------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis      ; vi-n-ni          ; Windows Vista ; 6.1        ; x86_64         ;
+; Fitter                    ; vi-n-ni          ; Windows Vista ; 6.1        ; x86_64         ;
+; Assembler                 ; vi-n-ni          ; Windows Vista ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; vi-n-ni          ; Windows Vista ; 6.1        ; x86_64         ;
+; EDA Netlist Writer        ; vi-n-ni          ; Windows Vista ; 6.1        ; x86_64         ;
++---------------------------+------------------+---------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off grain0 -c grain0
+quartus_fit --read_settings_files=off --write_settings_files=off grain0 -c grain0
+quartus_asm --read_settings_files=off --write_settings_files=off grain0 -c grain0
+quartus_sta grain0 -c grain0
+quartus_eda --read_settings_files=off --write_settings_files=off grain0 -c grain0
+
+
+
